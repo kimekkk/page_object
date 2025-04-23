@@ -25,11 +25,3 @@ def test_guest_can_add_product_to_basket(browser, link):
     page.guest_can_add_product_to_basket()
     print(f'URL страницы: {browser.current_url}')
     time.sleep(3)
-@pytest.mark.parametrize('link', links)
-
-def test_guest_can_add_product_to_basket(browser,link):
-    page = ProductPage(browser,link)
-    page.open()
-    page.guest_can_add_product_to_basket()
-    print(f'URL страницы: {browser.current_url}')
-    time.sleep(3)
