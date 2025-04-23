@@ -7,7 +7,6 @@ import pytest
 class TestUserAddToBasketFromProductPage:
     @pytest.fixture(scope="function", autouse=True)
     def setup(self, browser):
-        # Регистрация (как в задании)
         link = "http://selenium1py.pythonanywhere.com/accounts/login/"
         page = LoginPage(browser, link)
         page.open()
@@ -15,7 +14,7 @@ class TestUserAddToBasketFromProductPage:
         password = str(time.time())
         page.register_new_user(email, password)
         page.should_be_authorized_user()
-        
+
     @pytest.mark.need_review
     def test_user_can_add_product_to_basket(self, browser):
         link = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/"

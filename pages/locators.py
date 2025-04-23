@@ -10,7 +10,7 @@ class MainPageLocators():
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
 
 class LoginPageLocators:
-    LOGIN_URL = "http://selenium1py.pythonanywhere.com/ru/accounts/login/"  # Подстрока для проверки URL
+    LOGIN_URL = "http://selenium1py.pythonanywhere.com/ru/accounts/login/"  
     LOGIN_FORM = (By.CSS_SELECTOR, "#login_form")
     REGISTER_FORM = (By.CSS_SELECTOR, "#register_form")
 
@@ -29,6 +29,6 @@ class ProductPageLocators():
     SUCCESS_MESSAGE = (By.XPATH, '//*[@id="messages"]/div[1]')
 
 class BasketPageLocators:
-    BASKET_LINK = (By.XPATH, "//*[@id='default']/header/div[1]/div/div[2]/span/a")  # Более точный селектор
+    BASKET_LINK = (By.XPATH, "//*[@id='default']/header/div[1]/div/div[2]/span/a")  
     BASKET_ITEMS = (By.CSS_SELECTOR, ".basket-items")
     EMPTY_MESSAGE = (By.XPATH, "//*[@id='content_inner']/p")

@@ -62,7 +62,6 @@ class BasePage():
         assert self.is_element_present(*BasePageLocators.LOGIN_LINK), "Login link is not presented"
 
     def go_to_basket(self):
-    # Ждём и кликаем по-нормальному
         button = WebDriverWait(self.browser, 10).until(
             EC.element_to_be_clickable(BasketPageLocators.BASKET_LINK)
         )
